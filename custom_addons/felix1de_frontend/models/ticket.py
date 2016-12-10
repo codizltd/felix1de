@@ -15,10 +15,10 @@ class Felix1Ticket(models.Model):
 	claticketname=fields.Char('claTicketName')
 	state=fields.Selection([('new', 'Neu'),('progress','In Bearbeitung..'),('done', 'Bearbeitet'),('cancel', 'Abgebrochen')], string='Status',  default='new')
 	#company_id = fields.Many2one('res.company', 'Niederlassung', default=lambda self: self.env['res.company']._company_default_get('felix1.ticket'))
-	#mitarbeiter_id=fields.Many2one('felix1.employees',"Zugewiesener Mitarbeiter")
-	#priPriority=fields.Many2one('res.partner', "Ticket-Ersteller")
-	#conMail=fields.Char( string="Email", related="priPriority.email")
-	#ToDoPhone=fields.Char( string="Telefon" , related="priPriority.phone")
+	mitarbeiter_id=fields.Many2one('felix1.employees',"Zugewiesener Mitarbeiter")
+	tikErsteller=fields.Many2one('res.partner', "Ticket-Ersteller")
+	conMail=fields.Char( string="Email", related="tikErsteller.email")
+	ToDoPhone=fields.Char( string="Telefon" , related="tikErsteller.phone")
 	tikSenderDirectDial=fields.Char('Absender Durchwahl')
 	tikSenderEmail=fields.Char('Absender Email')
 	tikStartDate=fields.Date('Erstellt Am')
@@ -32,7 +32,6 @@ class Felix1Ticket(models.Model):
 	#ChamBranch_rel=fields.Many2one('branch.branch', string="Kanzlei-Niederlassung")
 	#ChamMail=fields.Char('Email-Kanzlei', related='ChamBranch_rel.branch_mail')
 	ticketcalk=fields.Char(string="ticketingID",store=True, compute="ticketname")
-	#priPriority_id=fields.Many2one('backend.mandanten')
 
 		
 			
@@ -51,7 +50,7 @@ class Felix1Ticket(models.Model):
 	    """ Create new project issue"""
 	    seq = {
 		'name': vals['name'],
-                'partner_id':vals['priPriority'],
+                'partner_id':vals['tikErsteller'],
                 'email_from':vals['conMail'],
 		#'prm_ticket_id':vals['prm_ticket_id'],
                 'mitarbeiter_id':vals['mitarbeiter_id'],
@@ -115,5 +114,5 @@ class Felix1TicketKathegories(models.Model):
 class ResPartner(models.Model):
 	_inherit='res.partner'
 	
-	#ticketing_rel=fields.One2many('felix1.ticket','priPriority') 
+	#ticketing_rel=fields.One2many('felix1.ticket','tikErsteller') 
 

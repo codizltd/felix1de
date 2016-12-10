@@ -43,7 +43,7 @@
         'views/res_partner/partner_kontakte.xml',
         'views/own_menus/start.xml',
         #'views/res_partner/partner_mandanten.xml',
-        #'views/project_issue/ticketsystem.xml',
+        'views/project_issue/ticketsystem.xml',
         #'views/res_company/branch_view.xml',
         #'views/contract_view.xml',
         #'views/res_partner/notebooks/bank_details_view.xml',

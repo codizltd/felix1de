@@ -1,2 +1,3 @@
 eclipse.preferences.version=1
-encoding//custom-addons/felix1de_frontend/views/own_menus/__init__.py=utf-8
+encoding//custom_addons/felix1de_frontend/__openerp__.py=utf-8
+encoding//custom_addons/felix1de_frontend/models/ticket.py=utf-8
