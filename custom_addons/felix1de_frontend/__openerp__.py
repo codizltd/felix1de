@@ -40,7 +40,7 @@
         'security/security.xml',
         # Model related views
         'views/own_menus/backend.xml',
-        'views/res_partner/partner_kontakte.xml',
+        #'views/res_partner/partner_kontakte.xml',
         'views/own_menus/start.xml',
         #'views/res_partner/partner_mandanten.xml',
         'views/project_issue/ticketsystem.xml',

@@ -96,7 +96,7 @@
         
 
 <!--START MENU (ticket)-->
-            <menuitem id="start_root_menu" name="Start" groups="group_felix1_abteilungsleiter"/> 
+            <menuitem id="start_root_menu" name="Start" groups="group_felix1_abteilungsleiter,group_felix1_mitarbeiter"/> 
             
             <menuitem id="start_sub_menu" parent="start_root_menu" name="Liste Tickets"/> 
             <menuitem id="start_sub_menu_sub1" parent="start_sub_menu" name="Eigene Tickets" sequence="1" action="action_felix1_ticket_tree_view_eigene_tickets"/>

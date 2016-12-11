@@ -7,6 +7,5 @@ import product
 import mandanten
 import kanzleien
 import project
-import partner
 
 

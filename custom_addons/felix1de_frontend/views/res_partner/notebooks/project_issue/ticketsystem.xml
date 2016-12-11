@@ -89,7 +89,7 @@
 					            <group>
 					                <field name="frkKathegory_id"/>
 					                <field name="tikDueDate"/>
-					                <field name="mandanten_id"/>
+					                <!--field name="mandanten_id"/-->
 					              
 					            </group>
 					            <group>
